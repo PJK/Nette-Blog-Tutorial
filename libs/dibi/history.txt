@@ -1,0 +1,316 @@
+Version 1.3dev on 2010-05-26 (8c99f0c): Driver's reflection capabilities moved to IDibiReflector
+Version 1.3dev on 2010-05-25 (7bac2ef): typos, changed nettephp.com -> nette.org
+Version 1.3dev on 2010-05-19 (651c0f8): DibiProfiler is configurable via DibiConnection $config
+Version 1.3dev on 2010-05-19 (88b1a45): DibiResult is configured via items 'detectTypes' and 'formatDateTime' in 'result' subarray; removed RESULT_DETECT_TYPES & RESULT_DATE_TIME
+Version 1.3dev on 2010-05-19 (9d80386): updated Nette\Debug
+Version 1.3dev on 2010-05-19 (d19afd5): Removed inTransaction definitely (BC break!)
+Version 1.3dev on 2010-05-19 (8b4cd4e): DibiTranslator: %f modifier converts value to number
+Version 1.3dev on 2010-05-19 (286cd7b): DibiFluent: implemented clause auto-switch for 'JOIN', 'INNER JOIN', 'LEFT JOIN'
+Version 1.3dev on 2010-05-19 (1285d9b): DibiMsSqlDriver: exception message received from mssql_get_last_message()
+Version 1.3dev on 2010-05-19 (0748c69): DibiMsSql2005Driver: added config aliases 'username', 'password', 'database'
+Version 1.3dev on 2010-05-19 (550c477): DibiConnection::alias() refactoring
+Version 1.3dev on 2010-05-19 (27d58bf): DibiDatabaseInfo: provides substitutions
+Version 1.3dev on 2010-05-19 (bec5594): rewritten dibi::IDENTIFIER escaping; added support for [table.*]
+Version 1.3dev on 2010-05-16 (2793061): REGEXP optimizations
+Version 1.3dev on 2010-05-16 (553f7da): implemented PCRE error checking and PcreException
+Version 1.3dev on 2010-04-26 (555e825): DibiResult: fixed compatibility with new DibiRow
+Version 1.3dev on 2010-04-26 (5d95f0b): added DibiRow::toArray() & Countable
+Version 1.3dev on 2010-04-26 (2638462): ArrayObject -> Traversable & iterator_to_array
+Version 1.3dev on 2010-04-23 (f048cc4): added @method phpDoc
+Version 1.3dev on 2010-04-22 (784153e): DibiRow is not longer ArrayObject descendant
+Version 1.3dev on 2010-04-22 (a4c5f32): DibiConnection: $config can be Traversable
+Version 1.3dev on 2010-04-22 (90d6100): added @property phpDoc
+Version 1.3dev on 2010-04-22 (ea5e1f0): SQLite driver: implemented database reflection
+Version 1.3dev on 2010-04-22 (7412f8b): DibiPdoDriver::getColumnsMeta PHP < 5.2.3 compatibility
+Version 1.3dev on 2010-04-22 (35b8a4f): Fix MySQL implementation of inTransaction()
+Version 1.3dev on 2010-04-22 (e8517b4): PostgreSQL driver now allows 'database' key in config array instead of 'dbname'
+Version 1.3dev on 2010-04-22 (7504a51): enabled 'unsigned' option on mysql and mysqli column info
+Version 1.3dev on 2010-04-06 (550be3b): Debug Bar fix
+Version 1.3dev on 2010-04-04 (52e5d43): DibiProfiler: added [explain] info
+Version 1.3dev on 2010-04-04 (57b6813): DibiProfiler: $tickets is now static, profiler sets dibi static variables
+Version 1.3dev on 2010-04-03 (52f8128): profiler fix
+Version 1.3dev on 2010-04-01 (3f6a075): updated for new Nette Debug Bar
+Version 1.3dev on 2010-03-29 (22d41ca): DibiProfiler: json_encode in native in PHP 5.2
+Version 1.3dev on 2010-02-24 (0b95624): typos
+Version 1.3dev on 2010-02-24 (dbe79ae): DibiResult: convert() is protected
+Version 1.3dev on 2010-02-24 (92ea9f2): DibiResult: default type for datetime changed from timestamp -> object DateTime (BC break)
+Version 1.3dev on 2010-02-24 (c01bfd7): added new option 'resultDateTime' - replaces parameter $format in DibiResult::setType()
+Version 1.3dev on 2010-02-24 (527863f): added new option 'resultDetectTypes' - calls automatically detectTypes()
+Version 1.3dev on 2010-02-24 (4054bdc): DibiResult: removed setWithTables & 'resultWithTables' configuration option (BC break!)
+Version 1.3dev on 2010-02-24 (a232327): DibiResult: small refactoring
+Version 1.3dev on 2010-02-16 (5763973): DibiDataSource: better table name detection in __construct
+Version 1.3dev on 2010-02-15 (ec1a1ec): DibiRow::asDateTime() added $format parameter
+Version 1.3dev on 2010-01-26 (55cd98e): DibiFluent: fixed support for cloning
+Version 1.3dev on 2010-01-26 (a8e83ce): DibiRow: added asTimestamp() & asDateTime(), therefore asDate() is deprecated
+Version 1.3dev on 2010-01-24 (e232bf4): DibiFluent: clause() argument can be in upper-case
+Version 1.3dev on 2010-01-24 (65965b0): DibiFluent: added support for cloning
+Version 1.3dev on 2010-01-23 (e035c13): DibiPostgreDriver: getTables() returns always array
+Version 1.3dev on 2010-01-23 (b8600ee): added DibiFluent::REMOVE const
+Version 1.3dev on 2010-01-23 (2395b83): DibiTranslator: added modifiers %sN & %iN, replacements for %sn & %in
+Version 1.3dev on 2010-01-23 (cb1ed71): DibiPdoDriver: added rowCount()
+Version 1.3dev on 2010-01-23 (fa0b146): DibiTranslator: empty arrays DO NOT generate NULL (BC break!) & added array modifier %in
+Version 1.3dev on 2010-01-23 (bb40e28): DibiTranslator: %by supports inner arrays
+Version 1.3dev on 2010-01-23 (1ecc4ab): DibiMySqlDriver & MySQLi: sets time_zone in connect()
+Version 1.3dev on 2010-01-23 (76c02a6): DibiFluent: added removeClause()
+Version 1.3dev on 2010-01-15 (b9ec304): small code refactoring
+Version 1.3dev on 2010-01-14 (e177436): added DateTime53, fix for crappy DateTime in PHP 5.2
+Version 1.3dev on 2010-01-11 (9d4a887): typos
+Version 1.3dev on 2010-01-11 (d61bd79): DibiConnection: inTransaction() is back, implemented in drivers
+Version 1.3dev on 2010-01-03 (c374758): - year 2009 -> 2010
+Version 1.3dev on 2009-12-18 (7688dd8): DibSQLite3Driver: improved by Roman Sklenar
+Version 1.3dev on 2009-12-18 (686b60f): DibiOracleDriver: implemented getInsertId()
+Version 1.3dev on 2009-12-18 (ccd20b6): added SQLite3 driver
+Version 1.3dev on 2009-12-17 (20d22dd): DibiConnection: deprecated inTransaction (BC break!)
+Version 1.3dev on 2009-12-09 (f6d4107): DibiResult: fixed bug in new-syntax fetchAssoc()
+Version 1.3dev on 2009-11-26 (75ede18): removed PHP 5.1 support; removed DibiVariable & IDibiVariable
+Version 1.3dev on 2009-11-16 (8586eb8): changed empty-date detection
+Version 1.3dev on 2009-11-16 (5e77744): code smoothing
+Version 1.3dev on 2009-11-03 (4b2a329): DibiDataSource: removed the final keyword of the __toString() method.
+Version 1.3dev on 2009-11-03 (22b62ee): MSSQL driver: Added subselect alias in applyLimit.
+Version 1.3dev on 2009-10-13 (b00257c): Updated DibiFirebirdDriver & DibiMsSql2005Driver
+Version 1.3dev on 2009-10-06 (4235b35): DibiResult: rewritten associate descriptor syntax
+Version 1.3dev on 2009-10-06 (0337cbd): DibiResult: fetchAssoc refactoring
+Version 1.3dev on 2009-09-30 (d68e526): updated version number
+Version 1.3dev on 2009-09-18 (3b2ca19): Released version 1.2
+Version 1.3dev on 2009-09-18 (16f6d53): All setters provide a fluent interface now (i.e. return $this)
+Version 1.3dev on 2009-09-09 (6d353c0): DibiResult: removed destructor
+Version 1.3dev on 2009-09-09 (698c12e): DibiColumnInfo: getType() is implemented lazy
+Version 1.3dev on 2009-09-09 (70ba2f0): added DibiResultInfo, available via DibiResult::getInfo()
+Version 1.3dev on 2009-09-09 (7e539f8): typo changes
+Version 1.3dev on 2009-09-08 (532ed3a): MySQL drivers: getColumns() obtains comments
+Version 1.3dev on 2009-08-26 (08e70fd): DibiTranslator: fixed bug in DateTime object usage
+Version 1.3dev on 2009-08-21 (217de42): DibiPostgreDriver: added user => username alias (thanks to Milan Matejcek)
+Version 1.3dev on 2009-08-21 (fa6d771): dibi internally uses DateTime object in PHP 5.2
+Version 1.3dev on 2009-08-20 (3777bac): DibiOracleDriver: supports configuration options 'fmtDate' & 'fmtDateTime'
+Version 1.3dev on 2009-08-17 (9850a2f): opened 1.2-dev
+Version 1.3dev on 2009-08-17 (031bd2b): released dibi 1.1
+Version 1.3dev on 2009-08-14 (7c69328): updated for GIT
+Version 1.3dev on 2009-08-13 (208a579): - last rev fix
+Version 1.3dev on 2009-08-13 (eeba6cf): - DibiConnection: fixed insert() with modifiers (thanks to Matej Kravjar)
+Version 1.3dev on 2009-08-13 (8cc1d8b): - MS drivers: bool TRUE is now +1 - DibiDatabaseInfo: LONGTEXT is recognized as TEXT
+Version 1.3dev on 2009-08-12 (c2a2a4c): - added netterobots.txt
+Version 1.3dev on 2009-07-23 (5e3bc8d): - added driver for Firebird/InterBase database (thanks to authors Tomáš Kraina, Roman Sklenář)
+Version 1.3dev on 2009-07-15 (6f34e56): - updated Nette\Debug
+Version 1.3dev on 2009-07-13 (18a7665): - consolidating the aliases for the connection parameters
+Version 1.3dev on 2009-07-08 (fb026ef): - DibiTranslate: better validation for %m
+Version 1.3dev on 2009-07-08 (2d69d4a): - added new multiinsert modifier 'm' (thanks to Milan Matejcek)
+Version 1.3dev on 2009-07-08 (0d79d16): - binary unescape doesn't throw exceptions more
+Version 1.3dev on 2009-07-02 (a3f673e): - DibiProfiler: added some limits for Firebug
+Version 1.3dev on 2009-06-30 (6ff605e): - typo
+Version 1.3dev on 2009-06-26 (6f4641c): - added example for dibi & Nette\Debug::consoleDump()
+Version 1.3dev on 2009-06-19 (77efc27): - DibiResultIterator: is countable (thanks to Roman Sklenar)
+Version 1.3dev on 2009-06-19 (e52cee8): - DibiConnection: insert() and update() accepts ArrayObject
+Version 1.3dev on 2009-06-19 (74178a5): - DibiTranslator: added brackets for %and %or (thanks to Jiri Sutera) - DibiMySqlDriver: added common error constants
+Version 1.3dev on 2009-06-13 (c67bcd5): - DibiDataSource: added escaping
+Version 1.3dev on 2009-06-03 (bf15d60): - DibiRow: added helper methods asDate() & asBool() - DibiTranslator: added new modifier %in - integer or NULL
+Version 1.3dev on 2009-06-02 (9c435ac): - DibiDataSource: fixed count() vs. release() bug (thanks to Roman Sklenář)
+Version 1.3dev on 2009-06-02 (1e08a91): - DibiTranslator: fixed strange security bug! (thanks to Matej Kravjar)
+Version 1.3dev on 2009-05-24 (43c7e70): - DibiResult: setWithTables() and setRowClass() provide a fluent interface - DibiTranslator: enhanced arrays syntax
+Version 1.3dev on 2009-05-11 (fb8054d): - added placeholder ?
+Version 1.3dev on 2009-05-09 (564a0e5): - renamed compact -> minified
+Version 1.3dev on 2009-04-26 (bba85b5): - Oracle driver: fixed bug
+Version 1.3dev on 2009-04-26 (98d43e0): - Oracle driver: implemented applyLimit() & getTables() - DibiDataSource: removed key word AS - DibiProfiler: fixed bug with unbuffered queries - DibiTranslator: empty %and generates '1=1'
+Version 1.3dev on 2009-04-16 (6589519): - DibiTranslator: empty arrays generate NULL (it may cause an BC break!) - Dibi: disables magic_quotes_runtime
+Version 1.3dev on 2009-03-19 (496c224): typos
+Version 1.3dev on 2009-03-17 (aa05a85): - BYTEA detection fixed
+Version 1.3dev on 2009-03-16 (5946b7e): - removed 'FIELD_' from dibi data types
+Version 1.3dev on 2009-03-16 (a9afe1e): - improved binary escaping
+Version 1.3dev on 2009-03-08 (97969ed): - smarter handling of substitutions :subst: outside of brackets []
+Version 1.3dev on 2009-03-08 (d0097d6): - updated Nette\Debug
+Version 1.3dev on 2009-03-08 (7969289): - DibiDataSource: fixed empty ORDER BY - DibiTranslator: removed empty %by handling - DibiTranslator: better NULL values handling
+Version 1.3dev on 2009-03-02 (5c2245a): - added DibiDataSource::release()
+Version 1.3dev on 2009-02-26 (2f86997): - affectedRows(), insertId(), rowCount() are aliases for getAffectedRows(), getInsertId(), getRowCount()
+Version 1.3dev on 2009-02-25 (d2f1beb): - added connection directive 'substitutes' - better ArrayObject handling in DibiTranslator
+Version 1.3dev on 2009-02-23 (14b731e): - added DibiDataSource::fetch(), fetchAll(), fetchSingle(), fetchPairs() & fetchAssoc()
+Version 1.3dev on 2009-02-22 (60559d9): - added mysql_info support
+Version 1.3dev on 2009-02-22 (b958e37): - supported substitutions :subst: outside of brackets []
+Version 1.3dev on 2009-02-22 (a267443): - substitution is performed by DibiTranslator - fixed bug in DibiTranslator
+Version 1.3dev on 2009-02-13 (0b0596d): - DibiTable removed from distribution (is available as separated archive)
+Version 1.3dev on 2009-02-11 (419929f): - DibiSqliteDriver: added registerFunction() and registerAggregateFunction()
+Version 1.3dev on 2009-02-08 (8df67d0): - fixed bug in DibiDataSource - added DibiDataSource::getTotalCount() - PostgreSql compatibility
+Version 1.3dev on 2009-02-05 (60662bd): - improved DibiDataSource
+Version 1.3dev on 2009-02-05 (dd6ffc3): - DibiTranslator: modifiers %ex, %by, %n improved, %SQL added - DibiDataSource: allows select columns, sorting and conditions
+Version 1.3dev on 2009-02-05 (46d79fc): - DibiConnection & DibiTranslator refactoring - DibiException accepts SQL parameter - undeprecated IDataSource
+Version 1.3dev on 2009-02-05 (32ed383): - query returns DibiResult or number of affected rows now
+Version 1.3dev on 2009-02-05 (bf6dc1c): - DibiFluent implements Countable, IteratorAggregate - DibiDataSource is deprecated - DibiTranslator - fixed DateTime class support
+Version 1.3dev on 2009-02-02 (a5a1da1): - DibiPostgreDriver: schema is case-sensitive - DibiTranslator: %n modifier can construct [table] AS t statements
+Version 1.3dev on 2009-01-17 (5ecfaf7): - all drivers accepts injected connection resource - DibiFluent: fixed identifier substitution
+Version 1.3dev on 2009-01-13 (47d1180): 
+Version 1.3dev on 2009-01-10 (7c0c4db): - fixed Oracle driver
+Version 1.3dev on 2009-01-08 (c24f2b8): - API cleanup: some method in DibiConnection marked as deprecated
+Version 1.3dev on 2009-01-07 (8417259): - added %ex modifier for keys in arrays
+Version 1.3dev on 2009-01-07 (ca87994): - DibiResultIterator is back (from rev. 123)
+Version 1.3dev on 2009-01-07 (c5f8a26): - improved %and & %or modifiers behavior - added %sql modifier for arrays (sub-translating)
+Version 1.3dev on 2009-01-07 (96acdb4): - DibiSQLiteDriver: added ability to convert strings to requested character encoding - added experimental Microsoft SQL Server 2005 Driver for PHP
+Version 1.3dev on 2009-01-05 (348af48): - updated PHP 5.3 namespace separator
+Version 1.3dev on 2009-01-05 (52a9e31): - PHP 5.2.x ArrayObject serialization bug workaround
+Version 1.3dev on 2008-12-31 (e5a1877): - year 2008 -> 2009
+Version 1.3dev on 2008-12-28 (4b189b9): - class DateTime support - DibiProfiler checks whether headers was sent
+Version 1.3dev on 2008-12-07 (781274b): - added fetch() methods into DibiConnection - public $useFirebug
+Version 1.3dev on 2008-11-25 (9244a1b): - supported UNIX timestamp in datetime column
+Version 1.3dev on 2008-11-22 (4b7b7de): - DibiFluent - added support for nested selects - DibiFluent::__toString() returns NOT highlighted SQL
+Version 1.3dev on 2008-11-17 (fb2621e): - implemented savepoints support
+Version 1.3dev on 2008-11-09 (2f690b6): - implemented insertId() in MS SQL driver
+Version 1.3dev on 2008-11-07 (9f8b19f): - implemented applyLimit() in PDO driver
+Version 1.3dev on 2008-10-30 (d08a5d3): - added DibiResult::setRowClass()
+Version 1.3dev on 2008-10-30 (901dc76): - released "dibi 1.0" - fixed FirePHP protocol bug - DibiTable -> DibiTableX
+Version 1.3dev on 2008-10-28 (8d063fe): - added DibiPostgreDriver::getIndexes() - implemented DibiTables types autodetection - all examples uses Nette::Debug
+Version 1.3dev on 2008-10-28 (a2d0d66): - phpDoc simplified
+Version 1.3dev on 2008-10-28 (7565ffb): - added dibi-field-type autodetection - added DibiColumnInfo::getVendorInfo()
+Version 1.3dev on 2008-10-28 (318b309): - added DibiPostgreDriver::getColumns()
+Version 1.3dev on 2008-10-28 (7a6cdc8): - improved examples
+Version 1.3dev on 2008-10-28 (ab89225): improved reflection skills
+Version 1.3dev on 2008-10-25 (e221a13): - requires FirePHP 0.2 - improved DibiFluent
+Version 1.3dev on 2008-10-25 (5662814): - DibiFluent autodetects modifiers for associative arrays (after where, orderBy, ...) - json_encode in PHP < 5.2
+Version 1.3dev on 2008-10-22 (32dd396): - added DibiProfiler (experimental) - removed dibi::addHandler() & dibi::startLogger()
+Version 1.3dev on 2008-10-21 (1e33b67): - added DibiTable magic fetch - fixed some bugs
+Version 1.3dev on 2008-10-10 (3e04378): - returns result-set rows as DibiRow objects! - removed option 'resultObjects' - SQlite driver removes quotes from result-set column names - this revision may cause compatibility break
+Version 1.3dev on 2008-10-10 (ae77148): introduced new class constants
+Version 1.3dev on 2008-10-02 (b0f155f): - implemented basic meta/reflection support
+Version 1.3dev on 2008-10-02 (fc69f8f): - fixed float numbers decimal separator vs. setlocale
+Version 1.3dev on 2008-10-01 (44f281d): fixed %by
+Version 1.3dev on 2008-10-01 (9eddba2): - BC change: DibiResult::fetchAll() returns always multidimensional arrays (for single columns use fetchPairs() instead) - added DibiTable::insertOrUpdate() - new modifier %by
+Version 1.3dev on 2008-09-15 (9b84459): quoted identifiers security fix
+Version 1.3dev on 2008-09-13 (8c4211d): - added fluent SQL builders support in DibiConnection and DibiTable
+Version 1.3dev on 2008-09-11 (96c69f5): 
+Version 1.3dev on 2008-09-11 (398c7a3): added new methods fetchSingle, fetchAll, fetchAssoc and fetchPairs to DibiFluent
+Version 1.3dev on 2008-09-05 (e5af8a8): - Object renamed to DibiObject - DibiTranslator: improved %and and %or handling - DibiTable::findAll allows to add conditions
+Version 1.3dev on 2008-09-04 (f935968): refactoring in drivers
+Version 1.3dev on 2008-09-03 (52d2ecf): - DibiResult::fetchAssoc() respects 'resultObject' configuration option - DibiResult::dump() forces arrays - updated Nette::Object
+Version 1.3dev on 2008-08-28 (d4f9e03): - fixed undefined item in mysqli
+Version 1.3dev on 2008-08-28 (360f879): - added configuration option 'resultClass' - updated class Object
+Version 1.3dev on 2008-08-25 (119d5a1): - renamed configuration keys result:object, result:withtables and format:* to resultObject resp. resultWithTables (due compatibility with PHP 5.3 INI parser) - updated class Object
+Version 1.3dev on 2008-07-24 (c438b72): - DibiTable::insert() returns NULL when $primaryAutoIncrement is FALSE
+Version 1.3dev on 2008-07-22 (97f2ed3): - public magic methods
+Version 1.3dev on 2008-07-22 (e48cd54): - DibiTable::$types enables auto-convert columns to specified type - DibiTable::insert() returns NULL, when $primary is FALSE
+Version 1.3dev on 2008-07-17 (85d190e): 
+Version 1.3dev on 2008-07-17 (c0bd376): modified SVN properties
+Version 1.3dev on 2008-07-15 (7f0fa2e): - added config alias 'hostname' for 'host'
+Version 1.3dev on 2008-07-12 (69ead6d): improved dibi, Texy and Nette exceptions compatibility
+Version 1.3dev on 2008-06-30 (41e5b32): minor: renamed resultset -> resultSet
+Version 1.3dev on 2008-06-18 (2a4f5ec): improved DibiPdoDriver identifier escaping
+Version 1.3dev on 2008-06-10 (d128951): - new DibiTable constructor - moved "tricky clone" from DibiConnection::query to IDibiDriver::query
+Version 1.3dev on 2008-06-08 (4e41f16): - added dibi::setSubstFallBack() - added DibiFluent::fetch()
+Version 1.3dev on 2008-05-25 (c23bf15): - DibiDriver::format splitted into escape() & unescape() - added DibiConnection::unescape - DibiPostgreDriver support escaping & unescaping BYTEA type
+Version 1.3dev on 2008-05-21 (3728b16): - added DibiFluent - bugfix in dibi::dump()
+Version 1.3dev on 2008-05-20 (69876a7): - removed DibiResultIterator - DibiConnection::nativeQuery & query() returns DibiResult or NULL - added optional parameters $offset, $limit, $simplify to DibiResult::fetchAll()
+Version 1.3dev on 2008-05-19 (4334eaa): fixed bug in IDibiDriver
+Version 1.3dev on 2008-05-16 (a8acce6): - removed DibiPostgreDriver workaround (there is no bug in pg_affected_rows) - added IDibiConnection::isConnected()
+Version 1.3dev on 2008-05-13 (b27b019): fixed compatibility with Nette::Config
+Version 1.3dev on 2008-05-12 (40e9f31): - DibiPostgreDriver - workaround for bug in pg_affected_rows - added DibiResult::setObjects([TRUE | FALSE | class name])
+Version 1.3dev on 2008-05-12 (7bb5684): code formatting: 4 spaces -> tabs
+Version 1.3dev on 2008-05-01 (fd22c55): DibiPdoDriver - new connection parameter "pdo" for PDO object passing
+Version 1.3dev on 2008-04-21 (62f8c47): compatibility with Nette::Config
+Version 1.3dev on 2008-04-19 (11a314c): minor: updated phpDoc headers
+Version 1.3dev on 2008-04-16 (c8febb8): /*Nette::*/Object
+Version 1.3dev on 2008-04-03 (24bf999): * better datetime converting in DibiResult (see http://forum.dibiphp.com/viewtopic.php?pid=2331) * added support for Nette_Debug * renamed NObject -> Nette_Object (Nette::Object in PHP 5.3)
+Version 1.3dev on 2008-03-04 (2632953): - removed NException, ability of catching PHP error moved to DibiDriverException
+Version 1.3dev on 2008-02-15 (1459c6c): updated headers
+Version 1.3dev on 2008-02-14 (2f9704b): - DibiPostgreDriver: added support for "schema" - DibiTable::fetch($conditions) (experimental) - DibiConnection no longer invokes autoloading
+Version 1.3dev on 2008-02-01 (8da9e77): added new Nette exceptions
+Version 1.3dev on 2008-01-20 (89dfa9f): fixed bug in conditional SQL
+Version 1.3dev on 2008-01-18 (18e02de): - REWRITTEN DibiTranslar - allows modifiers inside SQL -> modifiers become placeholders - new modifier %ex - expand array - new modifiers %or and %and - changed interface IDibiVariable and implementation DibiVariable
+Version 1.3dev on 2008-01-18 (f6b781f): - added DibiDataSource as default implementation of IDataSource - new modifiers %lmt %ofs - removed old modifier %p (alias for %sql)
+Version 1.3dev on 2008-01-15 (c41167d): bug fixed
+Version 1.3dev on 2008-01-15 (5c045e5): * added DibiTable * new connection options: "result:objects" & "result:withtables" * renamed DibiDriverInterface -> IDibiDriver, DibiVariableInterface -> IDibiVariable
+Version 1.3dev on 2008-01-12 (da0a239): * dibi::loadFile() extreme fast SQL dump loading
+Version 1.3dev on 2008-01-02 (de4a882): - DibiResult: meta type Dibi::FIELD_BOOL resolves 'f' and 'F' as FALSE
+Version 1.3dev on 2007-12-11 (041f059): removed NClass
+Version 1.3dev on 2007-12-07 (2c8906e): * new: DibiResult::fetchAssoc() supports "object" mode via @ descriptor * fixed mysqli_set_charset in PHP < 5.1.5
+Version 1.3dev on 2007-12-05 (dfacb48): * fixed DibiPostgreDriver::insertId * changed URL to http://dibiphp.com
+Version 1.3dev on 2007-12-01 (7d964e0): * fixed identifier delimitation in DibiPostgreDriver (table.col -> table."col") * better SQL syntax highlighting * removed addslashes from DibiPostgreDriver
+Version 1.3dev on 2007-11-30 (cbd3702): * new: qualifiy each column name with the table name using DibiResult::setWithTables * removed DibiResult::setType(TRUE) with autodetection * removed DibiResult::getFields() & getMetaData() in favour of new method getColumnsMeta() * MySQLi and MySQL transaction implementation are the same * better escaping in DibiPostgreDriver (new pg_escape_string and addslashes)
+Version 1.3dev on 2007-11-28 (1aad1c8): * better syntax highlighting * all drivers checks for extension in constructor * DibiMySqlDriver - charset is set by mysql_set_charset * DibiMySqliDriver - charset is set by mysqli_set_charset
+Version 1.3dev on 2007-11-26 (1a9abfb): NClass moved to separate file
+Version 1.3dev on 2007-11-24 (a0febd3): * added support for affectedRows in DibiPdoDriver
+Version 1.3dev on 2007-11-23 (c8fedf7): optimizations
+Version 1.3dev on 2007-11-23 (7c6947a): * added dibi::date & dibi::datetime * DibiConnection::insertId && affectedRows throws exception on failure * added protected throwException() to drivers * DibiPostgreDriver - can build connection string * DibiSqliteDriver - support for parameters 'format:date' & 'format:datetime' * fixed query errors in DibiSqliteDriver * DibiConnection prevents serialization and multiple transactions
+Version 1.3dev on 2007-11-22 (3f42b2c): - added DibiVariable (experimental) - fixed bug in DibiPostgreDriver::insertId()
+Version 1.3dev on 2007-11-18 (981a1ad): Changed symbols for fetchAssoc: # means index, = means record field
+Version 1.3dev on 2007-11-18 (58ed8d3): DibiException is NException descendant
+Version 1.3dev on 2007-11-17 (cbb315c): * renamed DibiDatabaseException to DibiDriverException * PDO driver convert PDOExceptions to DibiDriverException
+Version 1.3dev on 2007-11-15 (c174e20): 
+Version 1.3dev on 2007-11-14 (6bfa40f): added NException
+Version 1.3dev on 2007-11-13 (0eeff53): * DibiConnection::getConfig('name') returns name of connection * seek() returns boolean again * DibiDriver throws exception when is used after free()
+Version 1.3dev on 2007-11-12 (40444c1): * added dibi::fetch, dibi::fetchAll, dibi::fetchSingle * some bugs fixed
+Version 1.3dev on 2007-11-12 (d19eb5b): fixed some bugs
+Version 1.3dev on 2007-11-12 (46850aa): * update DibiVariableInterface * some bugs fixed
+Version 1.3dev on 2007-11-12 (89c5339): 
+Version 1.3dev on 2007-11-12 (22c27f6): BIG REFACTORING! * DibiDriver -> DibiConnection
+Version 1.3dev on 2007-11-12 (ea00d5d): * seek() or rowCount() in unbuffered mode throws exceptions * out of range seek() throws exception * deprecated DibiDriver::errorInfo * fixed seek(0) on first iteration * added DibiDatabaseException::catchError() & restore() for converting errors to exceptions
+Version 1.3dev on 2007-11-12 (5ee6a19): * added support for unbuffered queries (MySQL, MySQLi, SQLite) * doc-comments changed to be compatible with phpDocumentor * DibiDriver::config() renamed to alias()
+Version 1.3dev on 2007-11-11 (fd1d2b8): added NClass
+Version 1.3dev on 2007-11-10 (9ff43d0): added DibiDriver::disconnect()
+Version 1.3dev on 2007-11-09 (8a6d664): * renamed some files libs * added doc comments to drivers * DibiDriver::prepare() renamed to config() * fixed connection error handling in Postgre driver
+Version 1.3dev on 2007-11-08 (6492fe1): * added NObject
+Version 1.3dev on 2007-11-08 (8b99c00): fetchAssoc() && fetchPairs() throws exceptions
+Version 1.3dev on 2007-11-08 (25fa429): * new exceptions: BadMethodCallException, InvalidArgumentException * DibiMySqlDriver, DibiMySqliDriver, DibiSqliteDriver, DibiOracleDriver: error checking instead of FALSE checking in doQuery
+Version 1.3dev on 2007-11-01 (453cc9b): 
+Version 1.3dev on 2007-11-01 (917b085): added icon dibi-powered.gif
+Version 1.3dev on 2007-10-30 (6856ace): Changed New BSD License to "dibi license"
+Version 1.3dev on 2007-10-28 (330930f): fixed boolean value in Postgre driver
+Version 1.3dev on 2007-10-26 (39c62c1): * added configuration aliases (user -> username, pass -> password) * dibi::$defaultDriver
+Version 1.3dev on 2007-10-13 (879bbeb): changed website to http://php7.org/dibi/
+Version 1.3dev on 2007-10-02 (eb5b3d9): + untested Oracle driver
+Version 1.3dev on 2007-10-01 (ccea418): DibiDriver::doQuery returns TRUE or DibiResult
+Version 1.3dev on 2007-09-29 (d35a850): * removed $throwExceptions (always throws) * added DibiLogger, dibi::notify(), dibi::startLogger() * miniprofiler dibi::$numOfQueries, $totalTime, $elapsedTime * simplified DibiException, added DibiDatabaseException * Dibi::nativeQuery splitted into DibiDriver::doQuery & nativeQuery() * moved dibi::dumpResult -> DibiResult::dump() * moved dibi::test() -> DibiDriver::test() * DibiTranslator generates $mask
+Version 1.3dev on 2007-09-27 (0d8478d): - dibi::substitute -> dibi::getSubst - dibi:removeSubst(TRUE) removes all substitutes
+Version 1.3dev on 2007-08-29 (281cdb6): * added dibi::addHandler & dibi::invokeEvent * logging moved from DibiDriver -> Dibi::afterQuery()
+Version 1.3dev on 2007-08-28 (53874f2): * support for sequence name in dibi::insertId() & DibiPostgreDriver::insertId() * implemented DibiPostgreDriver::insertId() * implemented DibiPostgreDriver::delimite()
+Version 1.3dev on 2007-08-28 (d5e6ced): added: throw new DibiException(__METHOD__ . ' is not implemented')
+Version 1.3dev on 2007-08-28 (6f4d2c5): * removed variables $insertId & $affectedRows
+Version 1.3dev on 2007-08-28 (0ff0cd2): * fixed pg_affected_rows
+Version 1.3dev on 2007-08-27 (5243122): * support for big int & big floats
+Version 1.3dev on 2007-08-23 (7f995a5): * fixed odbc_num_rows and pg_affected_rows
+Version 1.3dev on 2007-08-23 (05b8c0a): 
+Version 1.3dev on 2007-08-20 (2c6608f): IDibiVariable -> DibiVariableInterface
+Version 1.3dev on 2007-08-09 (8b89eb3): * vetsina method/trid oznacena jako final
+Version 1.3dev on 2007-06-25 (609a3d6): static public -> public static
+Version 1.3dev on 2007-06-25 (5f4dbbb): * some variables renamed
+Version 1.3dev on 2007-06-24 (a7ddc15): updated phpDoc blocks
+Version 1.3dev on 2007-06-24 (5ffbe07): Changed "Access to undeclared property" exception message
+Version 1.3dev on 2007-06-19 (e2e5ba1): * Changed license to NEW BSD license
+Version 1.3dev on 2007-06-11 (c7dbc71): * fetchPairs improved
+Version 1.3dev on 2007-05-30 (e33689a): multi INSERT or REPLACE command
+Version 1.3dev on 2007-05-17 (89a7c8a): 
+Version 1.3dev on 2007-05-13 (7452065): * new MS SQL driver * removed constant DIBI
+Version 1.3dev on 2007-05-11 (f766827): bugfix, enhanced error reporting, better examples
+Version 1.3dev on 2007-04-25 (d03f60c): 
+Version 1.3dev on 2007-04-25 (7c693a2): 
+Version 1.3dev on 2007-04-25 (799dfcc): 
+Version 1.3dev on 2007-04-25 (b7834a3): 
+Version 1.3dev on 2007-04-25 (af7c4de): * removed static factory DibiDriver::connect() * added support for lazy connections
+Version 1.3dev on 2007-04-16 (166f716): * quoteName -> delimite * fixed mysql_connect bug
+Version 1.3dev on 2007-04-11 (57fa583): 
+Version 1.3dev on 2007-04-11 (e834c0c): modified phpDoc headers
+Version 1.3dev on 2007-04-06 (89ee302): - added parameter $name in dibi::getConnection() - bug fixed error handling in SQlite driver
+Version 1.3dev on 2007-03-27 (5317871): * DibiPdoDriver bugs fixed
+Version 1.3dev on 2007-03-27 (48ea525): * DibiDriver::query -> DibiDriver::nativeQuery * Dibi::query moved to DibiDriver::query * methods getFields(), detectTypes(), getMetaData() moved to base class DibiDriver * added PDO driver (not tested)
+Version 1.3dev on 2007-03-26 (f64a5d5): * fixed affectedRows & insertId bug
+Version 1.3dev on 2007-02-14 (4d2c90b): * support for default values (mysql.default_user etc...)
+Version 1.3dev on 2007-02-05 (4b2e042): * DibiResult::fetchAssoc() rewritten
+Version 1.3dev on 2007-02-02 (0c86515): * modified DibiException (getDbError, ...) * fix dibi::dumpResult()
+Version 1.3dev on 2007-01-30 (a2b1036): * SET CHARACTER SET -> SET NAMES * %p bug
+Version 1.3dev on 2007-01-29 (6536dfb): + rewritten support for logging & error handling + modifier %sn * modifier %sql * changed modifier behaviour: NULL is always 'NULL'
+Version 1.3dev on 2007-01-08 (ac980fe): + DibiResult::fetchAll() * changed year in headers (2007)
+Version 1.3dev on 2006-11-22 (3b8766d): * throwing exception in DibiTranslator and DibiDriver + added dibi::$errorMode
+Version 1.3dev on 2006-11-13 (f447a03): throwing exception on connect
+Version 1.3dev on 2006-10-26 (11b294b): renamed parser -> translator added "Undefined property usage prevention"
+Version 1.3dev on 2006-09-23 (d705f40): applyLimit support
+Version 1.3dev on 2006-09-23 (da608c2): substitutes moved from DibiDriver to Dibi changed "comments" behavior in DibiParser
+Version 1.3dev on 2006-09-13 (da70be2): 
+Version 1.3dev on 2006-09-13 (6c4ede1): added PostgreSQL driver
+Version 1.3dev on 2006-08-25 (36b8850): remove operator @ in connect() methods
+Version 1.3dev on 2006-08-25 (2cc9fa2): prefix & substitution support (0.6c)
+Version 1.3dev on 2006-08-04 (82e82e8): specify license GPL as "v2" only
+Version 1.3dev on 2006-07-19 (deeff32): logFile etc.
+Version 1.3dev on 2006-06-08 (b779082): 
+Version 1.3dev on 2006-06-08 (1e3728c): renamed some modifiers
+Version 1.3dev on 2006-06-08 (3030881): parser updates, DibiResult:: to Dibi::
+Version 1.3dev on 2006-06-07 (18d3dd4): embedded SQL moved to formatValue()
+Version 1.3dev on 2006-06-07 (0e7f85c): updated conditional SQL
+Version 1.3dev on 2006-06-07 (a3a17f1): added conditional SQL
+Version 1.3dev on 2006-06-07 (0951ea5): update to 0.6
+Version 1.3dev on 2006-06-07 (8361028): updated headers
+Version 1.3dev on 2006-06-04 (8e16698): update to 0.5b
+Version 1.3dev on 2006-06-04 (0d18c4c): update to 0.5alpha

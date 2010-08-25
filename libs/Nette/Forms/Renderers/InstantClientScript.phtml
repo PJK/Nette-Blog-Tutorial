@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Nette Framework - InstantClientScript template.
+ *
+ * @copyright  Copyright (c) 2004, 2010 David Grudl
+ * @license    http://nette.org/license  Nette license
+ * @link       http://nette.org
+ * @category   Nette
+ * @package    Nette\Forms
+ *
+ * @param      string    $formName
+ * @param      this      InstantClientScript
+ * @return     void
+ */
+
+namespace Nette\Forms;
+
+use Nette;
+
+?>
+<!-- Nette Form validator -->
+
+<script type="text/javascript">/*<![CDATA[*/var nette=nette||{};nette.getValue=function(a){if(a){if(!a.nodeName){for(var b=0,d=a.length;b<d;b++)if(a[b].checked)return a[b].value;return null}if(a.nodeName.toLowerCase()==="select"){b=a.selectedIndex;var c=a.options;if(b<0)return null;else if(a.type==="select-one")return c[b].value;b=0;a=[];for(d=c.length;b<d;b++)c[b].selected&&a.push(c[b].value);return a}if(a.type==="checkbox")return a.checked;return a.value.replace(/^\s+|\s+$/g,"")}};
+nette.getFormValidators=function(a){a=a.getAttributeNode("id").nodeValue;return this.forms[a]?this.forms[a].validators:[]};nette.validateControl=function(a){var b=this.getFormValidators(a.form)[a.name];return b?b(a):null};nette.validateForm=function(a){var b=a.form||a,d=this.getFormValidators(b);for(var c in d){var e=d[c](a);if(e){b[c].focus&&b[c].focus();alert(e);return false}}return true};nette.toggle=function(a,b){if(a=document.getElementById(a))a.style.display=b?"":"none"};/*]]>*/</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+nette.forms = nette.forms || { };
+
+nette.forms[<?php echo $formName ?>] = {
+	validators: {
+<?php $count = count($this->validateScripts); ?>
+<?php foreach ($this->validateScripts as $name => $validateScript): ?>
+		<?php echo json_encode((string) $name) ?>: function(sender) {
+			var res, val, form = sender.form || sender;
+<?php echo Nette\String::indent($validateScript, 3) ?>
+		}<?php echo --$count ? ',' : '' ?>
+
+<?php endforeach ?>
+	},
+
+	toggle: function(sender) {
+		var visible, res, form = sender.form || sender;
+<?php echo Nette\String::indent($this->toggleScript, 2) ?>
+	}
+}
+
+
+<?php if ($this->toggleScript): ?>
+nette.forms[<?php echo $formName ?>].toggle(document.getElementById(<?php echo $formName ?>));
+<?php endif ?>
+
+/* ]]> */
+</script>
+
+<!-- /Nette Form validator -->
