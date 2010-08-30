@@ -50,6 +50,7 @@ class HomepagePresenter extends BasePresenter
 		$data['date'] = new DateTime();
 		$data['post_id'] = (int) $this->getParam('id');
 		$id = CommentsModel::insert($data);
+		$this->flashMessage('Komentář uložen!');
 		$this->redirect("this#comment-$id");
 	}
 }
