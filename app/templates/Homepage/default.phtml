@@ -1,16 +1,16 @@
 {block content}
-
 <h1>Můj blogísek</h1>
 <div id="posts">
-	{if count($posts)}
-		{foreach $posts as $post}
-		<div class="post">
-			<h3>{$post['title']}</h3>
-			<small>Přidáno {$post['date']|date}</small>
-			<p>{$post['body']}</p>
-		</div>
-		{/foreach}
-	{else}
-		Zatím nebyl napsán žádný článek.
-	{/if}
+    {if count($posts)}
+        {foreach $posts as $post}
+        <div class="post">
+            <h3>{$post['title']}</h3>
+            <small>Přidáno {$post['date']|date}</small>
+            <p>{$post['body']|truncate:300}</p>
+            <a href="{link single $post['id']}">Více…</a>
+        </div>
+        {/foreach}
+    {else}
+        Zatím nebyl napsán žádný článek.
+    {/if}
 </div>

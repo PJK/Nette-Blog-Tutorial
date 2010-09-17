@@ -4,7 +4,7 @@ class PostsModel
 {
 	public static function fetchAll()
 	{
-		return dibi::query('
+		return dibi::fetchAll('
 			SELECT *
 			FROM [posts]
 			ORDER BY [date]', dibi::DESC

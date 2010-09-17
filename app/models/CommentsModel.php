@@ -4,7 +4,7 @@ class CommentsModel
 {
 	public static function fetchAll($postId)
 	{
-		return dibi::query('
+		return dibi::fetchAll('
 			SELECT *
 			FROM [comments]
 			WHERE [post_id] = %i', $postId
